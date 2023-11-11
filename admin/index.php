@@ -4,7 +4,8 @@ if(isset($_GET["act"])){
     $act = $_GET['act'];
     switch ($act) {
         case 'alldanhmuc':
-           echo "đ có gì";
+           include('layout/alldanhmuc.php');
+           break;
     }
 }else{
     include("layout/home.php");
