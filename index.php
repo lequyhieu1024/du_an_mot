@@ -25,3 +25,5 @@ include("config.php");
         include("app/views/layout/home.php");
     }
     include ("app/views/layout/footer.php");
+?>
+xin chào
