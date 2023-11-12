@@ -10,6 +10,7 @@ if(isset($_POST['register'])){
   if($mat_khau === $xn_mat_khau){
     $sql = "INSERT INTO tai_khoan(ten_tai_khoan, email, mat_khau,role) VALUES ('$ten_tai_khoan','$email','$mat_khau','$role')";
     pdo_execute($sql);
+    $_COOKIE['ten_tai_khoan'] = $ten_tai_khoan;
     $success = "Register Success";  
   }else{
     $err = "Password Confirmation Error";
