@@ -26,4 +26,3 @@ include("config.php");
     }
     include ("app/views/layout/footer.php");
 ?>
-xin chào
