@@ -44,7 +44,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Thống kê</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -158,13 +158,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="tatcakhoahoc" class="nav-link">
+                <a href="index.php?act=allkhoahoc" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tất cả khóa học</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="themkhoahoc" class="nav-link">
+                <a href="index.php?act=addkhoahoc" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm khóa học</p>
                 </a>
@@ -181,13 +181,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="tatcakhoahoc" class="nav-link">
+                <a href="index.php?act=taikhoanqtv" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tài khoản Admin & NV</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="tatcakhoahoc" class="nav-link">
+                <a href="index.php?act=taikhoanhv" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tài khoản học viên</p>
                 </a>
