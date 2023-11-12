@@ -1,4 +1,6 @@
 <?php 
+session_start();
+include("config.php");
 include ("app/views/layout/header.php");
 if(isset($_GET['redirect'])){
     $redirect = $_GET['redirect'];
@@ -11,6 +13,12 @@ if(isset($_GET['redirect'])){
             break;
         case "forgotpass":
             include("app/views/forgotpass.php");
+            break;
+        case "logout":
+            include("app/views/logout.php");
+            break;
+        case "unsetcookie":
+            include("app/views/fogotcookie.php");
             break;
         }
 }else{

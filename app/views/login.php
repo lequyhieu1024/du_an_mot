@@ -1,3 +1,22 @@
+<?php
+$err = "";
+  if(isset($_POST["login"])){
+    $ten_tai_khoan = $_POST['ten_tai_khoan'];
+    $mat_khau = $_POST['mat_khau'];
+    $sql = "SELECT * FROM tai_khoan WHERE ten_tai_khoan='$ten_tai_khoan'";
+    $result = pdo_query_one($sql);
+    if($ten_tai_khoan == $result['ten_tai_khoan'] && $mat_khau == $result['mat_khau']){
+      $_SESSION['ten_tai_khoan'] = $ten_tai_khoan;
+      $_SESSION['role'] = $result['role'];
+      if(isset($_POST['remember'])){
+        setcookie('remember', $mat_khau, time()+60*60*24*365,"/") ;
+      }
+      header("location:index.php");
+    }else{
+      $err = "UserName or Password isn't true";
+    } 
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,9 +43,9 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="../../index3.html" method="post">
+      <form action="" method="post">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="text" class="form-control" required name="ten_tai_khoan" placeholder="User Name">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -34,17 +53,18 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" required name="mat_khau" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
             </div>
           </div>
         </div>
+        <span style="color:red"><?php echo $err;?></span>
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
-              <input type="checkbox" id="remember">
+              <input type="checkbox" name="remember" id="remember">
               <label for="remember">
                 Remember Me
               </label>
@@ -52,7 +72,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" name="login" class="btn btn-primary btn-block">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
