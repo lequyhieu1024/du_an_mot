@@ -1,11 +1,13 @@
+<?php ob_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>admin</title>
+  <title>Admin</title>
   <!-- css link -->
   <link rel="stylesheet" href="dist/css/index.css">
+  <!-- boostrap link -->
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -91,7 +93,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="index.php" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">admin</span>
     </a>
@@ -104,7 +106,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Nhóm 7</a>
+          <a href="index.php" class="d-block">Nhóm 7</a>
         </div>
       </div>
 
@@ -135,7 +137,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="index.php?act=alldanhmuc" class="nav-link">
+                <a href="index.php?act=alldanhmuc&table=danh_muc_khoa_hoc" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tất cả danh mục</p>
                 </a>
@@ -158,7 +160,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="index.php?act=allkhoahoc" class="nav-link">
+                <a href="index.php?act=allkhoahoc&table=khoa_hoc" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tất cả khóa học</p>
                 </a>
@@ -181,19 +183,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="index.php?act=taikhoanqtv" class="nav-link">
+                <a href="index.php?act=taikhoanqtv&table=tai_khoan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tài khoản Admin & NV</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="index.php?act=taikhoanhv" class="nav-link">
+                <a href="index.php?act=taikhoanhv&table=tai_khoan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tài khoản học viên</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="themkhoahoc" class="nav-link">
+                <a href="index.php=addtaikhoan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tạo tài khoản</p>
                 </a>
@@ -210,7 +212,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="tatcakhoahoc" class="nav-link">
+                <a href="index.php?act=allbinhluan&table=binh_luan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tất cả bình luận</p>
                 </a>
@@ -227,13 +229,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="tatcakhoahoc" class="nav-link">
+                <a href="index.php?act=allgiangvien&table=giang_vien" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tất cả giảng viên</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="themkhoahoc" class="nav-link">
+                <a href="index.php?act=addgiangvien" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm giảng viên</p>
                 </a>
@@ -250,13 +252,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="tatcakhoahoc" class="nav-link">
+                <a href="index.php?act=allkhuyenmai&table=khuyen_mai" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Khuyến mãi đang hoạt động</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="themkhoahoc" class="nav-link">
+                <a href="index.php?addkhuyenmai" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tạo CT khuyến mại mới </p>
                 </a>
@@ -273,15 +275,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="tatcakhoahoc" class="nav-link">
+                <a href="index.php?act=allrole&table=role" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Quyền người truy cập hiện có</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="themkhoahoc" class="nav-link">
+                <a href="index.php?act=addrole" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Thêm quyền</p>
+                  <p>Thêm quyền người truy cập</p>
                 </a>
               </li>
             </ul>

@@ -78,7 +78,7 @@ if(isset($_POST['register'])){
           </div>
         </div>
         <span style="color:red"><?php echo $err ;?></span> <span style="color:green;"><?php echo $success;?></span>
-        <input type="hidden" name="role" value="hv">
+        <input type="hidden" name="role" value="1">
         <div class="row">
           <div class="col-4">
            

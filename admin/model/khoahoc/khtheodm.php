@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,24 +10,22 @@
     <table class="table">
     <thead>
         <tr>
-        <th scope="col">Mã Khóa Học</th>
+            <th scope="col">Mã Khóa Học</th>
             <th scope="col">Tên Khóa Học</th>
             <th scope="col">AVT</th>
             <th scope="col">Tiền Học</th>
             <th scope="col">Mô Tả</th>
-            <th scope="col">Số lượt yêu thích</th>
             <th scope="col">Số Lượt Xem</th>
             <th scope="col">Trạng thái</th>
             <th scope="col">Mã Giảng Viên</th>
-            <th scope="col">Danh Mục</th>
+            <th scope="col">Mã Danh Mục</th>
             <th scope="col">Slideshow</th>
-            <th scope="col">Thao tác</th>
         </tr>
     </thead>
     <tbody>
         <?php
-        $khoahoc = khoahoc();
-        foreach($khoahoc as $row):
+        $kh_theo_dm = kh_theo_dm();
+        foreach($kh_theo_dm as $row):
         extract($row); ?>
         <tr>
             <th scope="row"><?=$ma_khoa_hoc ?></th>
@@ -34,14 +33,13 @@
             <td><?=$avt ?></td>
             <td><?=$tien_hoc ?></td>
             <td><?=$mo_ta ?></td>
-            <td><?=$so_luot_thich ?></td>
             <td><?=$so_luot_xem ?></td>
             <td><?=$trang_thai ?></td>
             <td><?=$ma_giang_vien ?></td>
-            <td><?=$ten_danh_muc ?></td>       
-            <td><?=$slideshow ?></td>       
+            <td><?=$ma_danh_muc ?></td>       
+            <td><?=$slideshow ?></td> 
             <td><a href=""><button class="btn btn-warning">Sửa</button></a>
-                <a href="index.php?act=delete&header=allkhoahoc&table=khoa_hoc&id=ma_khoa_hoc&iddl=<?=$ma_khoa_hoc;?>"><button class="btn btn-danger">Xóa</button></a>
+                <a href="index.php?act=deletedm&ma_danh_muc=<?=$ma_danh_muc;?>"><button class="btn btn-danger">Xóa</button></a>
             </td>       
         </tr>
         <?php endforeach; ?>

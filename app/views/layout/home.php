@@ -6,6 +6,6 @@ home
  echo $_SESSION['ten_tai_khoan']; echo "<br/>";?>
  =============================================
  <?php 
- if($_SESSION['role']==='qtv'){
+ if($_SESSION['role']==3){
     echo '<a href="admin/index.php">đến tragn quản trị viên</a> ';
  }
