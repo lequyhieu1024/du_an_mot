@@ -15,5 +15,5 @@ if(isset($_SESSION['role'])){
 
 ?>
 <div>
-    huân
+    huân đẹp trai
 </div>
