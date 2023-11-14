@@ -14,6 +14,3 @@ if(isset($_SESSION['role'])){
 }
 
 ?>
-<div>
-    huân
-</div>
